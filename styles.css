@@ -1,6 +1,7 @@
 /* Whole page content style. This is specific to all the content in the webpage */
 body {
     text-align: center;
+    
 
 }
 
@@ -14,10 +15,11 @@ header {
 /* Styles the first level of the HTML document. This targets page's logo area, and the Webpage's heading area */
 .first-container {
     background-color: #1f2937;
-    display: flex;
     flex-direction: column;
     gap: 55px;
     color: #f9faf9;
+    flex-wrap: wrap;
+
 }
 
 /* Styles the webpage's logo (Logo area) */
@@ -46,6 +48,7 @@ header {
 .title {
     display: flex;
     gap: 100px;
+    flex-wrap:wrap;
 }
 
 /* Styles the website title container */
@@ -63,9 +66,8 @@ header {
 .container-two-right {
     display: flex;
     flex: 1;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    background-color: grey;
 }
 
 /* Specifically targetst the h2 in the 2nd half of the first-container*/
@@ -78,8 +80,30 @@ header {
 
 /*//PART 2//*/
 /*........*/
+.second-container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+/*....*/
+.second-container h3 {
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 900;
+}
 
+/*......*/
+.wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info-on-items {
+    padding: 30px;
+    margin-top: -25px;
+}
 
 
 
@@ -88,9 +112,8 @@ header {
 /* Style the Third section of the HTML. This part contains the quote text (CONTAINER) and the author of the quote (CONTAINER)*/
 .third-container {
     background-color: #e5e7eb;
-    display: flex;
-
     flex-direction: column;
+   
 
 }
 
@@ -100,7 +123,7 @@ header {
     font-size: 36px;
     font-style:italic;
     text-align: justify;
-    padding-top: 30px;
+    padding: 50px;
     font-weight: lighter;
 }
 
@@ -111,7 +134,7 @@ header {
     display: flex;
     justify-content: flex-end;
     margin-top: -20px;
-    margin-right: 25px;
+    margin-right: 35px;
 }
 
 
@@ -120,9 +143,32 @@ header {
 
 
 /*//PART 4//*/
+/*......*/
+.fourth-container {
+    justify-content: center;
+    align-items: center;
+    background-color: #3882f6;
+    color:#f9faf9;
+    border-radius: 10px;
+    margin: 85px 50px;
+    justify-content: space-around;
+    text-align: start;
+    
+}
+.container-four-left, .container-four-right {
+    margin-top: 40px;
+}
 
-
-
+.container-four-left .paraone, .paratwo {
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: -15px;
+    font-size: 24px;
+}
+.container-four-left .paratwo {
+    font-weight: lighter;
+    font-size: 18px;
+}
 
 
 /* Styles the buttons*/
@@ -142,7 +188,8 @@ button:hover {
 }
 
 .with-border {
-    border: 1px solid whitesmoke;
+    border: 2px double whitesmoke;
+    padding: 2px 35px;
 
 }
 
@@ -161,11 +208,35 @@ a:hover {
 
 /* Integrates the backgrounds of the various sections of the HTML file */
 .first-container, .second-container, .third-container, .fourth-container {
+    display: flex;
     padding: 0px 180px 80px 180px;
-    min-width: 200px;
+
+
 }
 
 /* Revove spacing between two divs*/
 .no-spacing {
-    margin-bottom: 2px;
+    margin-bottom: 20px;
+}
+
+
+img {
+    width: auto;
+    height: 80px;
+}
+
+.container-two-right img {
+    width: auto;
+    height: 250px;
+
+}
+
+footer {
+    background-color: #1f2937;
+    color: #f9faf8;
+    padding: 18px;
+    font-size: 10px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
 }

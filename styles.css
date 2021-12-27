@@ -1,45 +1,47 @@
 /* Whole page content style. This is specific to all the content in the webpage */
 body {
     text-align: center;
-    
-
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Styles the containers in the header element*/
-header {
-    display: flex;
-
-}
 /*//PART 1 - IT HAS 2 SECTIONS//*/
 /*SECTION 1*/
 /* Styles the first level of the HTML document. This targets page's logo area, and the Webpage's heading area */
+
 .first-container {
     background-color: #1f2937;
     flex-direction: column;
     gap: 55px;
     color: #f9faf9;
     flex-wrap: wrap;
+}
 
+/* Styles the containers in the header element*/
+header {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0px 2px 0px;
 }
 
 /* Styles the webpage's logo (Logo area) */
-.container-left {
+.header-left {
     display: flex;
-    flex: 1;
-    font-size: 24px;
-    font-weight: bolder;
-    margin: 10px 0px 15px 0px;
-
+}
+/* Targeting the specific image*/
+.header-left img {
+    max-width: 60%;
+    max-height: auto;
+    border-radius: 32%;
+    border-top-left-radius: 5%;
 }
 
 /* Styles the top links on the header */
-.container-right {
+.header-right {
     display: flex;
-    margin: 10px 0px 15px 0px;
-    align-items: center;
-    flex: 1;
-    gap: 18px;
+    flex-grow: 1;
     justify-content: flex-end;
+    gap: 35px;
+    margin-top: 5px;
     font-size: 18px;
 }
 
@@ -47,44 +49,55 @@ header {
 /* This has the header part of the page. Houses the webpage's title and picture/image container*/
 .title {
     display: flex;
-    gap: 100px;
-    flex-wrap:wrap;
-}
-
-/* Styles the website title container */
-.container-two-left {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    align-items: flex-start;
-    flex: 1;
-    font-size: 18px;
-    color: #e5e7eb;
-}
-
-/* Style the Image container*/
-.container-two-right {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    align-items: center;
+    flex-flow: wrap row;
+    gap: 10px;
 }
 
 /* Specifically targetst the h2 in the 2nd half of the first-container*/
 .container-two-left h2 {
-    margin-top: 0;
+    margin: 0px;
+    padding: 0px;
     font-size: 48px;
     color: #f9faf8;
     font-weight: bolder;
 }
 
+/* Revove spacing between the page heading/title and the information content*/
+h2.spacing {
+    margin-bottom: -15px;
+}
+
+/* Styles the website title container */
+.container-two-left {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    text-align: start;
+    align-items: flex-start;
+    align-content: space-between;
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+/* Confirms the wrap on the content information */
+div.squeeze {
+    display: flex;
+    flex-wrap:wrap;
+    max-width: 55%;
+}
+
+/*Targets the header image */
+img.container-two-right {
+    max-width: 400px;
+    max-height: 300px;
+}
+
 /*//PART 2//*/
 /*........*/
 .second-container {
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-}
+ }
 
 /*....*/
 .second-container h3 {
@@ -93,28 +106,40 @@ header {
     font-weight: 900;
 }
 
-/*......*/
+/* Style on the pictures and their respective text*/
 .wrapper {
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
+    margin: 0px;
+    justify-content: space-evenly;
 }
-
 .info-on-items {
-    padding: 30px;
-    margin-top: -25px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    max-height: auto;
+    margin: 10px;
+    padding: 10px;
+    gap: 15px;
+    font-size: 18px;
+    color: #1f2937;
 }
 
-
-
+/* Frames the photos and adds a border radius*/
+.photo-frames {
+    border: 3px solid #3882f6;
+    max-width: 200px;
+    max-height: auto;
+    border-radius: 10px;    
+}
 
 /*//PART 3//*/
 /* Style the Third section of the HTML. This part contains the quote text (CONTAINER) and the author of the quote (CONTAINER)*/
 .third-container {
     background-color: #e5e7eb;
     flex-direction: column;
-   
-
 }
 
 /* Style on the quote container*/
@@ -137,13 +162,8 @@ header {
     margin-right: 35px;
 }
 
-
-
-
-
-
 /*//PART 4//*/
-/*......*/
+/* Style the call to action section together with the sign-up button */
 .fourth-container {
     justify-content: center;
     align-items: center;
@@ -158,7 +178,6 @@ header {
 .container-four-left, .container-four-right {
     margin-top: 40px;
 }
-
 .container-four-left .paraone, .paratwo {
     font-weight: bold;
     text-align: start;
@@ -170,7 +189,18 @@ header {
     font-size: 18px;
 }
 
+/* Footer styles */
+footer {
+    background-color: #1f2937;
+    color: #f9faf8;
+    padding: 18px;
+    font-size: 10px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
 
+/*Other Syles within the code*/
 /* Styles the buttons*/
 .sign-up {
     background-color: #3882f6;
@@ -187,6 +217,7 @@ button:hover {
     font-weight: 600;
 }
 
+/* Sign up button with white borders*/
 .with-border {
     border: 2px double whitesmoke;
     padding: 2px 35px;
@@ -210,33 +241,5 @@ a:hover {
 .first-container, .second-container, .third-container, .fourth-container {
     display: flex;
     padding: 0px 180px 80px 180px;
-
-
 }
 
-/* Revove spacing between two divs*/
-.no-spacing {
-    margin-bottom: 20px;
-}
-
-
-img {
-    width: auto;
-    height: 80px;
-}
-
-.container-two-right img {
-    width: auto;
-    height: 250px;
-
-}
-
-footer {
-    background-color: #1f2937;
-    color: #f9faf8;
-    padding: 18px;
-    font-size: 10px;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-}
